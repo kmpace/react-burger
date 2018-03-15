@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 
-import Aux from '../../hoc/Auxiliary';
+import Aux from '../../hoc/Auxiliary/Auxiliary';
 import Burger from '../../components/Burger/Burger';
 import BuildControls from '../../components/Burger/BuildControls/BuildControls';
 import Modal from '../../components/UI/Modal/Modal';
@@ -48,7 +48,6 @@ class BurgerBuilder extends Component {
         };
         updatedIngredients[type] = updatedCount;
         const priceAddition = INGREDIENT_PRICES[type];
-        console.log(priceAddition);
         const oldPrice = this.state.totalPrice;
         const newPrice = oldPrice + priceAddition; 
         this.setState({totalPrice: newPrice, ingredients: updatedIngredients}); //updating the state when a new ingredient is added 
